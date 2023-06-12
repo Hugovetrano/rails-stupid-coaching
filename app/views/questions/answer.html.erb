@@ -1,0 +1,15 @@
+<div class="card" style="margin: 10px; padding: 10px">
+<p><%= params["question"] %></p>
+<p><i>-You</i></p>
+</div>
+<div class="card" style="margin: 10px; padding: 10px">
+  <% if params["question"] == "I am going to work"%>
+    <p><strong>Great!</strong></p>
+  <% elsif params["question"] =~ /\?/%>
+    <p><strong>Silly question, get dressed and go to work!</strong></p>
+  <% else %>
+  <p><strong>I don't care, get dressed and go to work!</strong></p>
+  <% end %>
+  <p><i>-Your coach</i></p>
+</div>
+<a href="/ask">Ask a new question</a>
